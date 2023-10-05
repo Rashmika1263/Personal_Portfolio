@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+</head>
+<style>
+    body {
+        color: rgb(255, 255, 255);
+        background-image: url(./images/bg/download.png);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        font-size: larger;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .details {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .tabs {
+        display: flex;
+        margin: 50px 0 40px;
+    }
+
+    .tabs p {
+        font-size: 25px;
+    }
+
+    .tab-links {
+        margin-right: 50px;
+        font-size: 18px;
+        font-weight: 800;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+    }
+
+    .tab-links::after {
+        content: '';
+        width: 0;
+        height: 3px;
+        background: #ff004f;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        transition: 0.7sec ease-in-out;
+    }
+
+    .tab-links.active-link::after {
+        width: 50%;
+    }
+
+    .tab-contents {
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+
+    .tab-contents h4 {
+        color: #ff2d70;
+        font-size: 25px;
+        list-style: circle;
+    }
+
+    .tab-contents ul li {
+        margin: 10px 0;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .tab-contents.active-block {
+        display: block;
+    }
+
+    .col-1 {
+        flex-basis: 35%;
+    }
+
+    .col-1 img {
+        margin-top: 30%;
+        width: 100%;
+        height: 300px;
+        border-radius: 15%;
+    }
+
+    .col-2 {
+        flex-basis: 60%;
+    }
+
+    .col-2 h1 {
+        text-decoration: underline;
+        font-size: 50px;
+        color: #ff004f;
+    }
+
+    .details a {
+        width: 40px;
+        height: 40px;
+        color: #ff004f;
+        background-color: #fadfdf;
+        border-radius: 30%;
+        text-decoration: none;
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 50px;
+        text-align: center;
+        transition: transform .2s;
+    }
+
+    .details a:hover {
+        background-color: #ffffff;
+        color: #ff4e4e;
+        box-shadow: #ffafc8;
+        transform: scale(1.1);
+    }
+</style>
+
+<body>
+    <div class="details">
+        <a href="./index.html"><span class="material-symbols-outlined">arrow_back</span></a>
+        <div class="col-1">
+            <img src="./images/picture2.webp">
+        </div>
+        <div class="col-2">
+            <h1>Credit card fraud detection</h1>
+            <div class="tabs">
+                <p class="tab-links active-link" onclick="opentab('overview')">Overview</p>
+                <p class="tab-links" onclick="opentab('challenges')">Challenges</p>
+                <p class="tab-links" onclick="opentab('solutions')">Solutions</p>
+            </div>
+            <div class="tab-contents active-block" id="overview">
+                <ul>
+                    <li>The Credit Card Fraud Detection project addresses the critical need for identifying
+                        fraudulent credit card
+                        transactions to prevent customers from being charged for unauthorized purchases.</li>
+                    <li>Leveraging the power of Data
+                        Science and Machine Learning, the project focuses on modeling a dataset using
+                        machine learning techniques to
+                        detect fraudulent transactions.</li>
+                    <li>The objective is to create a model that can
+                        distinguish between legitimate
+                        and
+                        fraudulent credit card transactions in order to protect account holders from
+                        unauthorized usage.</li>
+                    <li>This
+                        project
+                        involves analyzing past credit card transactions, particularly those that were
+                        identified as fraud.</li>
+                    <li>The
+                        developed model is then used to predict whether new transactions are likely to be
+                        fraudulent, aiming for a
+                        comprehensive detection of fraudulent cases while minimizing instances of incorrect
+                        fraud classifications.</li>
+                </ul>
+            </div>
+            <div class="tab-contents active-block" id="challenges">
+                <ul>
+                    <li>
+                        The Credit Card Fraud Detection problem comes with several challenges. One
+                        significant challenge is dealing with class imbalance.
+                    </li>
+                    <li>The number of legitimate transactions significantly outweighs
+                        fraudulent ones, resulting in an imbalanced dataset.
+                    </li>
+                    <li>This can lead to biased model performance and the potential for
+                        false negatives in fraud detection.
+                    </li>
+                    <li>Additionally, transaction patterns change over time, making it difficult
+                        to maintain an accurate model as patterns evolve.
+                    </li>
+                    <li>The dynamic nature of fraudulent activities also means
+                        that new tactics and strategies emerge, necessitating continuous adaptation of
+                        the model to detect novel fraud patterns.
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-contents active-block" id="solutions">
+                <ul>
+                    <li>The project's solution involves the application of advanced Machine Learning
+                        techniques to develop a robust fraud detection model.
+                    </li>
+                    <li> By using historical data of both legitimate and fraudulent
+                        transactions, the model learns to identify patterns and characteristics associated
+                        with fraudulent activities.
+                    </li>
+                    <li>Strategies for addressing class imbalance include techniques like oversampling the
+                        minority class, undersampling the majority class, or using
+                        more advanced methods like Synthetic Minority Over-sampling Technique (SMOTE).
+                    </li>
+                    <li>Additionally, continuous
+                        monitoring and periodic retraining of the model help it adapt to changing fraud
+                        patterns.
+                    </li>
+                    <li>By leveraging the power of automated data processing and analysis, the solution aims to provide
+                        a
+                        proactive and accurate approach to detecting fraudulent credit card transactions,
+                        thereby safeguarding customers and minimizing financial
+                        losses.
+                    </li>
+                    <p>In summary, the Credit Card Fraud Detection project utilizes Data Science and Machine
+                        Learning to create a
+                        model
+                        that detects fraudulent transactions, overcoming challenges such as class imbalance
+                        and dynamic fraud
+                        patterns.
+                        The solution involves implementing advanced techniques to ensure accurate fraud
+                        identification while
+                        minimizing
+                        false positives and negatives.
+                    </p>
+            </div>
+        </div>
+    </div>
+    <footer style="text-align: center;">
+        <p>© 2023 Rashmika. All Rights Reserved.</p>
+    </footer>
+</body>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-block");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-block");
+    }
+</script>
+
+</html>
